@@ -1,7 +1,6 @@
-import {ADD_TODO, CHANGE_SEARCH_INPUT, CHANGE_TODO_INPUT} from "../actions/todoActions";
+import {ADD_TODO, CHANGE_TODO_INPUT} from "../actions/todoActions";
 
 const initialState = {
-  search: '',
   todos: {
     todo: '',
     list: []
@@ -25,11 +24,6 @@ function todos(state = initialState, action) {
           ...state.todos,
           todo: action.text
         }
-      };
-    case CHANGE_SEARCH_INPUT:
-      return {
-        ...state,
-        search: action.text
       };
     default:
       return state;
