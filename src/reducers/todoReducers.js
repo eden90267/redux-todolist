@@ -1,10 +1,8 @@
 import {ADD_TODO, CHANGE_TODO_INPUT} from "../actions/todoActions";
 
 const initialState = {
-  todos: {
-    todo: '',
-    list: []
-  }
+  todo: '',
+  list: []
 };
 
 function todos(state = initialState, action) {
@@ -12,20 +10,16 @@ function todos(state = initialState, action) {
     case ADD_TODO:
       return {
         ...state,
-        todos: {
-          ...state.todos,
-          list: [...state.todos.list, action.text]
-        }
+        list: [...state.list, action.text]
       };
     case CHANGE_TODO_INPUT:
       return {
         ...state,
-        todos: {
-          ...state.todos,
-          todo: action.text
-        }
+        todo: action.text
       };
     default:
       return state;
   }
 }
+
+export default todos;

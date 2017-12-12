@@ -1,7 +1,8 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
+import TodoList from "./components/TodoList";
 
 ReactDOM.render(
-  <h1>Hello React !!</h1>,
+  <TodoList/>,
   document.querySelector('#app')
 );
