@@ -3,9 +3,10 @@ export const CHANGE_TODO_INPUT = 'CHANGE_TODO_INPUT';
 export const CHANGE_SEARCH_INPUT = 'CHANGE_SEARCH_INPUT';
 
 export function addTodo(text) {
-  return {
-    type: ADD_TODO,
-    text
+  return function (dispatch) {
+    setTimeout(() => {
+      dispatch({type: ADD_TODO, text}, 2000)
+    });
   };
 }
 
